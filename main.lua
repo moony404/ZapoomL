@@ -2,7 +2,7 @@ local circleX = 0
 local circleY = 0
 
 function love.draw()
-   love.graphics.circle("fill", 0, 0, 100)
+   love.graphics.circle("fill", 100, 0, 100)
 end
 
 function love.keypressed(key)
