@@ -3,6 +3,8 @@ player.x = 0
 player.y = 0
 player.speed = 300
 
+love.window.setIcon(./src)
+
 function love.draw()
    love.graphics.rectangle("fill", player.x, player.y, 100, 100)
 end
