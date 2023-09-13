@@ -16,8 +16,8 @@ love.window.setMode(1920, 1080) -- the size of the window (16;9 / 1920x1080[widt
 love.window.setTitle("test") -- the title of the window
 -- the draw funcion to draw the player and the background
 function love.draw()
-   love.graphics.draw(background)
-   love.graphics.draw(player.sprite, player.x, player.y)
+   love.graphics.draw(background) -- draw the background
+   love.graphics.draw(player.sprite, player.x, player.y) -- draw the player sprite
 end
 -- the main funcion
 function love.update(dt)
