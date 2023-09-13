@@ -1,18 +1,19 @@
 -- game run with love2d 11.4 library and it's made in Lua
 -- variables
-function love.load()
+function love.load() -- love2d's function to load some code before launch
    -- variables
    player = {}
-   player.x = 0
-   player.y = 0
-   player.speed = 200
+   player.x = 0 -- the x coordinates of the player
+   player.y = 0 -- the y coordinates of the player
+   player.speed = 200 -- the speed of the player & this variable is used to calculate the movement of the player
    -- img variables
    player.sprite = love.graphics.newImage('img/player.png')
    player.spriteSheet = love.graphics.newImage('img/player-sheet.png')
    background = love.graphics.newImage('img/background.png')
 end
 -- window settings
-love.window.setMode(1920, 1080)
+love.window.setMode(1920, 1080) -- the size of the window (16;9 / 1920x1080[widthx])
+love.window.setTitle("test") -- the title of the window
 -- the draw funcion to draw the player and the background
 function love.draw()
    love.graphics.draw(background)
