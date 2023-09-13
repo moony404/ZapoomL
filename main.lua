@@ -13,6 +13,7 @@ function love.load() -- love2d's function to load some code before launch
    player.sprite = love.graphics.newImage('img/player.png') -- add the player sprite image
    player.spriteSheet = love.graphics.newImage('img/player-sheet.png') -- add the payer sprite sheet image
    player.grid = anim8.newGrid(12 , 18, player.spriteSheet:getWidth(), player.spriteSheet:getHeight()) -- slice the player.spriteSheet to animated it later
+   player.animations.down = anim8.newAnimation(player.grid('1-4', 1), 0.2)
    background = love.graphics.newImage('img/background.png') -- add the background image
 end
 -- window settings
@@ -21,7 +22,8 @@ love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode
 -- the draw function draws the player and the background
 function love.draw() -- love2d's function to draw somthing on the screen
    love.graphics.draw(background) -- draw the background
-   love.graphics.draw(player.sprite, player.x, player.y, 0, 1.5) -- draw the player sprite at 0° rotation and 1.5 scale
+   player.animations.down:draw(player.spriteSheet, player.x, player.y, 0, 3) -- draw the player sprite at 0° rotation and 3 scale
+
 end
 -- love2d's function
 function love.update(dt) -- love2d's function to run the game smoothly on any device with the dt variable, the function is like a infinite loop
@@ -49,4 +51,5 @@ function love.update(dt) -- love2d's function to run the game smoothly on any de
    if love.keyboard.isDown("lctrl") then -- check if the left control key is down
       love.window.minimize() -- minimize the window
    end
+   player.animations.down:update(dt)
 end
