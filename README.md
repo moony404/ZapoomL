@@ -13,6 +13,7 @@ The game have keybinds and shortcuts ! Here are the list of key and their action
 - left arrow = move the player left
 - right arrow = move the player right
 - backspace = exit ZapoomL
+- left ctrl = minimize ZapoomL
 ```
 ## Links
 - [README.md](https://github.com/moony404/ZapoomL/blob/master/README.md)
