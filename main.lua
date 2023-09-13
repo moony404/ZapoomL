@@ -16,8 +16,8 @@ function love.load() -- love2d's function to load some code before launch
    background = love.graphics.newImage('img/background.png')
 end
 -- window settings
-love.window.setMode(1920, 1080) -- the size of the window (16;9 / 1920x1080[widthx])
 love.window.setTitle("ZapoomL") -- the title of the window
+love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode so it fit on all monitor/screen
 -- the draw function draws the player and the background
 function love.draw()
    love.graphics.draw(background) -- draw the background
