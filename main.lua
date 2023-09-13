@@ -1,6 +1,8 @@
 -- game run with love2d 11.4 library and it's made in Lua
 -- variables
 function love.load() -- love2d's function to load some code before launch
+   -- libraries
+   anim8 = require('libraries/anim8')
    -- variables
    player = {}
    player.x = 0 -- the x coordinates of the player
@@ -9,6 +11,8 @@ function love.load() -- love2d's function to load some code before launch
    -- img variables
    player.sprite = love.graphics.newImage('img/player.png')
    player.spriteSheet = love.graphics.newImage('img/player-sheet.png')
+   -- slice the player.spriteSheet to animated it later
+   player.grid = anim8.newGrid(12 , 18, player.spriteSheet:getWidth(), player.spriteSheet:getHeight())
    background = love.graphics.newImage('img/background.png')
 end
 -- window settings
