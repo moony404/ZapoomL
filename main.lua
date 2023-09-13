@@ -27,5 +27,9 @@ function love.update(dt)
    if love.keyboard.isDown("up") then
       player.y = player.y - player.speed * dt
    end
-   -- v
+   -- shortcut for keyboard
+   if love.keyboard.isDown("backspace") then
+      love.window.close()
+   end
+   -- close the app keybind
 end
