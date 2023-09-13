@@ -7,13 +7,12 @@ player.speed = 200
 -- img variables
 player.sprite = love.graphics.newImage('img/player.png')
 background = love.graphics.newImage('img/background.png')
-icon = love.graphics.newImage('img/icon.png')
 -- window settings
 love.window.setMode(1920, 1080)
 -- the draw funcion to draw the player and the background
 function love.draw()
-   love.graphics.draw(player.sprite, player.x, player.y)
    love.graphics.draw(background)
+   love.graphics.draw(player.sprite, player.x, player.y)
 end
 -- the main funcion
 function love.update(dt)
