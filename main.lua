@@ -13,13 +13,13 @@ function love.load() -- love2d's function to load some code before launch
 end
 -- window settings
 love.window.setMode(1920, 1080) -- the size of the window (16;9 / 1920x1080[widthx])
-love.window.setTitle("test") -- the title of the window
--- the draw funcion to draw the player and the background
+love.window.setTitle("ZapoomL") -- the title of the window
+-- the draw function draws the player and the background
 function love.draw()
    love.graphics.draw(background) -- draw the background
-   love.graphics.draw(player.sprite, player.x, player.y) -- draw the player sprite
+   love.graphics.draw(player.sprite, player.x, player.y, 0, 1.5) -- draw the player sprite
 end
--- the main funcion
+-- love2d's function
 function love.update(dt)
    -- player movement
    -- right
