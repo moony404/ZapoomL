@@ -23,7 +23,6 @@ love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode
 function love.draw() -- love2d's function to draw somthing on the screen
    love.graphics.draw(background) -- draw the background
    player.animations.down:draw(player.spriteSheet, player.x, player.y, 0, 3) -- draw the player sprite at 0° rotation and 3 scale
-
 end
 -- love2d's function
 function love.update(dt) -- love2d's function to run the game smoothly on any device with the dt variable, the function is like a infinite loop
