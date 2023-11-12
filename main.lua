@@ -26,26 +26,35 @@ love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode
 -- the draw function draws the player and the background
 function love.draw() -- love2d's function to draw somthing on the screen
    love.graphics.draw(background) -- draw the background
-   player.anim.down:draw(player.spriteSheet, player.x, player.y, 0, 3) -- draw the player sprite at 0° rotation and 3 scale
+   player.anim:draw(player.spriteSheet, player.x, player.y, 0, 3) -- draw the player sprite at 0° rotation and 3 scale
 end
 -- love2d's function
 function love.update(dt) -- love2d's function to run the game smoothly on any device with the dt variable, the function is like a infinite loop
    -- player movement
+   local isMoving = false
    -- right
    if love.keyboard.isDown("right") then -- check if the right arrow key is down
       player.x = player.x + player.speed * dt
+      player.anim = player.animations.right
+      isMoving = true
    end
    -- left
    if love.keyboard.isDown("left") then -- check if the left arrow key is down
       player.x = player.x - player.speed * dt
+      player.anim = player.animations.left
+      isMoving = true
    end
    -- down
    if love.keyboard.isDown("down") then -- check if the down arrow key is down
       player.y = player.y + player.speed * dt
+      player.anim = player.animations.down
+      isMoving = true
    end
    -- up
    if love.keyboard.isDown("up") then -- check if the up arrow key is down
       player.y = player.y - player.speed * dt
+      player.anim = player.animations.up
+      isMoving = true
    end
    -- shortcut for keyboard
    if love.keyboard.isDown("backspace") then -- check if the backspace key is down
@@ -54,5 +63,5 @@ function love.update(dt) -- love2d's function to run the game smoothly on any de
    if love.keyboard.isDown("lctrl") then -- check if the left control key is down
       love.window.minimize() -- minimize the window
    end
-   player.anim.down:update(dt)
+   player.anim:update(dt)
 end
