@@ -13,16 +13,16 @@ function love.load() -- love2d's function to load some code before launch
    player.sprite = love.graphics.newImage('img/player.png') -- add the player sprite image
    player.spriteSheet = love.graphics.newImage('img/player-sheet.png') -- add the payer sprite sheet image
    player.grid = anim8.newGrid(12, 18, player.spriteSheet:getWidth(), player.spriteSheet:getHeight()) -- slice the player.spriteSheet to animated it later
-   player.animations.down = anim8.newAnimation(player.grid('1-4', 1), 0.2)
-   player.animations.left = anim8.newAnimation(player.grid('1-4', 2), 0.2)
-   player.animations.right = anim8.newAnimation(player.grid('1-4', 3), 0.2)
-   player.animations.up = anim8.newAnimation(player.grid('1-4', 4), 0.2)
-   player.anim = player.animations.left
+   player.animations.down = anim8.newAnimation(player.grid('1-4', 1), 0.2) -- create the down animation for the player
+   player.animations.left = anim8.newAnimation(player.grid('1-4', 2), 0.2) -- create the left animation for the player
+   player.animations.right = anim8.newAnimation(player.grid('1-4', 3), 0.2) -- create the right animation for the player
+   player.animations.up = anim8.newAnimation(player.grid('1-4', 4), 0.2) -- create the up animation for the player
+   player.anim = player.animations.left -- player.anim is egual to player.animations.left
    background = love.graphics.newImage('img/background.png') -- add the background image
 end
 -- window settings
 love.window.setTitle("ZapoomL") -- the title of the window
-love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode so it fit on all monitor/screen
+love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode
 -- the draw function draws the player and the background
 function love.draw() -- love2d's function to draw somthing on the screen
    love.graphics.draw(background) -- draw the background
@@ -31,30 +31,33 @@ end
 -- love2d's function
 function love.update(dt) -- love2d's function to run the game smoothly on any device with the dt variable, the function is like a infinite loop
    -- player movement
-   local isMoving = false
+   local isMoving = false -- the local variable to define if the player is moving or not
    -- right
    if love.keyboard.isDown("right") then -- check if the right arrow key is down
-      player.x = player.x + player.speed * dt
-      player.anim = player.animations.right
-      isMoving = true
+      player.x = player.x + player.speed * dt -- make the player move right
+      player.anim = player.animations.right -- give the player the right animation
+      isMoving = true -- the player is moving
    end
    -- left
    if love.keyboard.isDown("left") then -- check if the left arrow key is down
-      player.x = player.x - player.speed * dt
-      player.anim = player.animations.left
-      isMoving = true
+      player.x = player.x - player.speed * dt -- make the player move left
+      player.anim = player.animations.left -- give the player the left animation
+      isMoving = true -- the player is moving
    end
    -- down
    if love.keyboard.isDown("down") then -- check if the down arrow key is down
-      player.y = player.y + player.speed * dt
-      player.anim = player.animations.down
-      isMoving = true
+      player.y = player.y + player.speed * dt -- make the player move down
+      player.anim = player.animations.down -- give the player the down animation
+      isMoving = true -- the player is moving
    end
    -- up
    if love.keyboard.isDown("up") then -- check if the up arrow key is down
-      player.y = player.y - player.speed * dt
-      player.anim = player.animations.up
-      isMoving = true
+      player.y = player.y - player.speed * dt -- make the player move up
+      player.anim = player.animations.up -- give the player the up animation
+      isMoving = true -- the player is moving
+   end
+   if isMoving == false then -- check if the player is not moving
+      player.anim:gotoFrame(2) -- then id it's true (if the player is not moving), we gave the player the stand animation (so it's not an animation if he's standing lol)
    end
    -- shortcut for keyboard
    if love.keyboard.isDown("backspace") then -- check if the backspace key is down
