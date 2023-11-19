@@ -3,6 +3,8 @@
 function love.load() -- love2d's function to load some code before launch
    -- libraries
    anim8 = require('libraries/anim8') -- imported anim8.lua from the libraries folder in ZapoomL
+   sti = require 'libraries/sti'
+   gameMap = sti('maps/testMap.lua')
    -- variables
    player = {} -- player table
    player.animations = {} -- player.animations table
