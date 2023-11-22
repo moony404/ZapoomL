@@ -2,9 +2,9 @@
 -- variables
 function love.load() -- love2d's function to load some code before launch
    -- libraries
-   anim8 = require('libraries/anim8') -- imported anim8.lua from the libraries folder in ZapoomL
-   sti = require 'libraries/sti'
-   gameMap = sti('maps/testMap.lua')
+   anim8 = require ('libraries/anim8') -- imported anim8.lua from the libraries folder in ZapoomL
+   sti = require 'libraries/sti' -- imported sti from the libraries folder in ZapoomL
+   gameMap = sti('maps/testMap.lua') -- make that gameMap is now egual to
    -- variables
    player = {} -- player table
    player.animations = {} -- player.animations table
@@ -20,7 +20,6 @@ function love.load() -- love2d's function to load some code before launch
    player.animations.right = anim8.newAnimation(player.grid('1-4', 3), 0.2) -- create the right animation for the player
    player.animations.up = anim8.newAnimation(player.grid('1-4', 4), 0.2) -- create the up animation for the player
    player.anim = player.animations.left -- player.anim is egual to player.animations.left
-   background = love.graphics.newImage('img/background.png') -- add the background image
 end
 -- window settings
 love.window.setTitle("ZapoomL") -- the title of the window
@@ -28,7 +27,7 @@ love.window.setFullscreen(true) -- make the window of ZapoomL in fullscreen mode
 -- the draw function draws the player and the background
 function love.draw() -- love2d's function to draw somthing on the screen
    gameMap:draw()
-   player.anim:draw(player.spriteSheet, player.x, player.y, 0, 6) -- draw the player sprite at 0° rotation and 3 scale
+   player.anim:draw(player.spriteSheet, player.x, player.y, 0, 3) -- draw the player sprite at 0° rotation and 3 scale
 end
 -- love2d's function
 function love.update(dt) -- love2d's function to run the game smoothly on any device with the dt variable, the function is like a infinite loop
