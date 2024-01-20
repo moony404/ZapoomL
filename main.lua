@@ -67,10 +67,8 @@ function love.update(dt) -- love2d's function to run the game smoothly on any de
    if love.keyboard.isDown("lctrl") then -- check if the left control key is down
       love.window.minimize() -- minimize the window
    end
-   if love.keyboard.isDown("lshift") then -- check if the left shift key is down
-      player.speed = player.speed + 1 -- make the player move a bit faster by adding 1 to the player speed
-   end
-   while love.keyboard.isDown("lshift") do
-  end
+   -- if love.keyboard.isDown("lshift") then -- check if the left shift key is down
+      -- player.speed = player.speed + 1 -- make the player move a bit faster by adding 1 to the player speed
+   -- end
    player.anim:update(dt)
 end

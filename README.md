@@ -18,6 +18,7 @@ The game have keybinds and shortcuts ! Here are the list of key and their action
 | `down`   | `Down arrow` | `Move the player down` |
 | `left`   | `Left arrow` | `Move the player left` |
 | `right`   | `Right arrow` | `Move the player right` |
+| `lshift`   | `Left Shift` | `Make the player sprint` |
 | `backspace`   | `Backspace` | `Close ZapoomL` |
 | `lctrl`   | `Left Control` | `Minimize ZapoomL in the taskbar` |
 
@@ -27,4 +28,3 @@ The game have keybinds and shortcuts ! Here are the list of key and their action
 - [ZapoomS (my website where is ZapoomC (the older version of ZapoomL))](https://moony404.github.io/ZapoomS)
 ## About me
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/@r60airair)
-
