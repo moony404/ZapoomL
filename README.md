@@ -18,7 +18,7 @@ The game have keybinds and shortcuts ! Here are the list of key and their action
 | `down`   | `Down arrow` | `Move the player down` |
 | `left`   | `Left arrow` | `Move the player left` |
 | `right`   | `Right arrow` | `Move the player right` |
-| `lshift`   | `Left Shift` | `Make the player sprint` |
+| `lshift`   | `Left Shift` | `Make the player sprint` | /!\ Not working
 | `backspace`   | `Backspace` | `Close ZapoomL` |
 | `lctrl`   | `Left Control` | `Minimize ZapoomL in the taskbar` |
 
