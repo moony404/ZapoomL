@@ -6,7 +6,8 @@ It's the sequel to ZapoomC wich was made in C and not in 2d.
 ## Installation
 
 To play/run ZapoomL :
-- Open the ZapoomL.exe file to play the game.
+- Unzip the zip folder ZapoomL_v1.zip
+- Open the ZapoomL_v1.exe file to play the game.
 - If you are in Visual Studio Code and working on the project you can use `Alt + L` to run the main.lua file (that only works if you have the love2d support extension (https://marketplace.visualstudio.com/items?itemName=pixelbyte-studios.pixelbyte-love2d) and the correct path in the extension settings (https://youtu.be/kpxkQldiNPU?si=ULshgMAzI5Ij6Tbt&t=302))
 ## Shortcuts/Keybinds
 
