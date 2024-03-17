@@ -1,3 +1,4 @@
-img/
-maps/
+src\img
 exe
+src\libraries
+src\maps
