@@ -1,4 +1,2 @@
-exe
-src\img
-src\libraries
-src\maps
+**/*.exe
+src/**
